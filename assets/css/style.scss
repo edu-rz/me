@@ -3,31 +3,70 @@
 
 @import "{{ site.theme }}";
 
-a {
-  color: #3300ff;
+/* 🎨 Paleta */
+:root {
+  --color-primary: rgb(71, 62, 68);      /* oscuro elegante */
+  --color-secondary: rgb(217, 150, 82);  /* cálido/dorado */
+  --color-accent: rgb(156, 132, 140);    /* tono intermedio */
+
+  --color-text: var(--color-primary);
+  --color-text-light: #444;
+  --color-bg: #ffffff;
+  --color-bg-alt: #fdfaf7;
+  --color-border: rgba(0,0,0,0.15);
 }
 
+@font-face {
+  font-family: manrope;
+  src: url(../fonts/Manrope-VariableFont_wght.ttf);
+}
+
+* {
+  font-family: 'manrope' !important;
+  color: var(--color-text);
+}
+
+body {
+  background: var(--color-bg);
+}
+
+/* Links */
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border);
+  transition: background 300ms, color 300ms;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--color-primary) !important;
+  background: var(--color-bg-alt);
+}
+
+/* Markdown body */
 .markdown-body {
   max-width: 800px;
-  font-size: 16px;
 }
 
 .markdown-body p {
-  font-size: 16px;
   line-height: 1.9em;
   margin-bottom: 1.2em;
+  color: var(--color-text-light);
 }
 
 .markdown-body li {
   line-height: 1.9em;
 }
 
+/* Checkboxes */
 input.task-list-item-checkbox {
   margin-right: 4px;
 }
 
+/* Images */
 img[src*="demo"] {
-  border: 1px #eee solid;
+  border: 1px solid var(--color-border);
   -webkit-box-shadow: 4px 4px 16px 0px rgba(50, 50, 50, 0.1);
   -moz-box-shadow: 4px 4px 16px 0px rgba(50, 50, 50, 0.1);
   box-shadow: 4px 4px 16px 0px rgba(50, 50, 50, 0.1);
@@ -42,16 +81,21 @@ img[src*="demo"] {
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-blockquote {
-  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida,
-    "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+/* Headings */
+h1, h2, h3, h4, h5 {
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  border-bottom: none !important;
+  color: var(--color-primary);
 }
 
+/* Code blocks */
+.markdown-body .highlight pre, 
+.markdown-body pre {
+  background: var(--color-bg-alt) !important;
+}
+
+/* Wiki links */
 .wikilink:before {
   content: "[[";
   opacity: 0.5;
@@ -62,13 +106,15 @@ blockquote {
   opacity: 0.5;
 }
 
+/* GitHub-only elements */
 .github-only {
   display: none;
 }
 
+/* Announcement box */
 .announcement {
-  background: #ede7ff;
+  background: var(--color-secondary);
   padding: 4px 16px;
-  color: black;
+  color: var(--color-bg);
   border-radius: 4px;
 }
