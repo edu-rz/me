@@ -1,0 +1,7 @@
+title: "edudedu"
+description: "Un sitio hecho con Jekyll y Foam"
+baseurl: ""   # si usas GitHub Pages en usuario.github.io deja vacío
+url: ""       # pon aquí tu dominio si usas custom (ej: https://midominio.com)
+
+markdown: kramdown
+theme: null   # 👈 importante: desactiva el tema externo

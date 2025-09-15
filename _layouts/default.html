@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ " /assets/css/styles.css" | relative_url }}">
+</head>
+
+<body class="markdown-body">
+  <header>
+    <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <!-- <nav>
+      <a href="{{ site.baseurl }}/">Inicio</a> |
+      <a href="{{ site.baseurl }}/docs/">Docs</a>
+    </nav> -->
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <p>&copy; {{ site.time | date: "%Y" }} — {{ site.title }}</p>
+  </footer>
+</body>
+
+</html>
+
+<script type="text/javascript">
+  // Hack: Remove .md extension from wikilinks to get the html in jekyll
+  document.querySelectorAll("a").forEach(l => {
+    if (l.href.endsWith('.md')) {
+      l.href = l.href.substring(0, l.href.length - 3)
+    }
+  })
+</script>

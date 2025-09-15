@@ -1,0 +1,178 @@
+---
+---
+
+/* 🎨 Paleta */
+:root {
+  --color-primary: #473e44; /* oscuro elegante */
+  --color-secondary: rgb(217, 150, 82); /* cálido/dorado */
+  --color-accent: rgb(156, 132, 140); /* tono intermedio */
+
+  --color-text: var(--color-primary);
+  --color-text-light: #444;
+  --color-bg: #ffffff;
+  --color-bg-alt: #fdfaf7;
+  --color-border: rgba(0, 0, 0, 0.15);
+}
+
+@font-face {
+  font-family: manrope;
+  src: url(../fonts/Manrope-VariableFont_wght.ttf);
+}
+
+* {
+  font-family: "manrope" !important;
+  color: var(--color-text);
+  text-align: justify;
+}
+
+.markdown-body {
+  background: var(--color-bg);
+  min-height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+header {
+  padding-top: 48px !important;
+}
+
+footer {
+  border-top: 1px solid var(--color-border);
+  margin: 48px 0 !important;
+  font-size: 0.9em;
+  color: var(--color-text-light);
+}
+
+/* Links */
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border);
+  transition: background 300ms, color 300ms;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--color-primary) !important;
+  background: var(--color-bg-alt);
+}
+
+.markdown-body p {
+  line-height: 1.9em;
+  margin-bottom: 1.2em;
+  color: var(--color-text-light);
+}
+
+.markdown-body li {
+  line-height: 1.9em;
+}
+
+/* Responsive: en pantallas grandes se da más aire */
+@media (min-width: 1024px) {
+  .markdown-body {
+    padding: 0 2rem;
+  }
+}
+
+/* Checkboxes */
+input.task-list-item-checkbox {
+  margin-right: 4px;
+}
+
+/* Images */
+img[src*="demo"] {
+  border: 1px solid var(--color-border);
+  -webkit-box-shadow: 4px 4px 16px 0px rgba(50, 50, 50, 0.1);
+  -moz-box-shadow: 4px 4px 16px 0px rgba(50, 50, 50, 0.1);
+  box-shadow: 4px 4px 16px 0px rgba(50, 50, 50, 0.1);
+}
+
+@media only screen and (min-width: 1170px) {
+  img[src*="demo"] {
+    max-width: 130%;
+    margin-left: -15%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: var(--color-primary);
+}
+
+/* Code blocks */
+.markdown-body .highlight pre,
+.markdown-body pre {
+  white-space: normal;
+  background: var(--color-bg-alt) !important;
+  padding: 24px 16px;
+}
+
+/* Wiki links */
+.wikilink:before {
+  content: "[[";
+  opacity: 0.5;
+}
+
+.wikilink:after {
+  content: "]]";
+  opacity: 0.5;
+}
+
+/* GitHub-only elements */
+.github-only {
+  display: none;
+}
+
+/* Announcement box */
+.announcement {
+  background: var(--color-secondary);
+  padding: 4px 16px;
+  color: var(--color-bg);
+  border-radius: 4px;
+}
+
+
+blockquote {
+  border-left: 4px solid var(--color-border);
+  background-color: var(--color-bg-alt);
+  margin: 0;
+  padding: 0 16px;
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* elimina espacios entre celdas */
+  margin: 1.5em 0;
+  font-size: 0.95rem;
+  background: var(--color-bg);
+}
+
+table th,
+table td {
+  padding: 6px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+table th {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  text-transform: uppercase;
+}
+
+table tr:hover {
+  background: var(--color-bg-alt);
+  color: var(--color-bg);
+  transition: background 0.2s ease;
+}
