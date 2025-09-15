@@ -1,7 +1,6 @@
 title: "edudedu"
 description: "Un sitio hecho con Jekyll y Foam"
 url: "https://edu-rz.github.io"
-baseurl: "/me"
-
+baseurl: "/me"   # ⚠️ importante, porque tu página no está en la raíz
+theme: null
 markdown: kramdown
-theme: null   # 👈 importante: desactiva el tema externo

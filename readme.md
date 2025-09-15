@@ -7,6 +7,6 @@
 
 ## Contenidos
 
-- [🥘 Cocina](./docs/cocina/cocina.md) - recetas de todo tipo
+- [🥘 Cocina]({{ "/docs/cocina/cocina" | relative_url }}) - recetas de todo tipo
 - [👨‍💻 Informática](./docs/cocina/cocina.md) - decisiones y teoría
 - [🌱 Plantas](./docs/cocina/cocina.md) - cuidado y crecimiento de plantas
