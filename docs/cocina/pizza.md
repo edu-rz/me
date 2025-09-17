@@ -4,11 +4,13 @@ layout: default
 
 # Pizza
 
-En 1830, en Nápoles, abrió sus puertas [Antica Port’Alba](https://www.anticapizzeriaportalba.com/), el primer restaurante en vender pizza a los locales. Desde aquel horno ancestral que mantiene sus puertas abiertas al público, como símbolo de tradición y parte de la historia universal. Desde allí, la pizza comenzó a popularizarse y conquistar el paladar del mundo. Dando origen a nuevas variaciones como la pizza al estilo norteamericano, rindiendo tributo al legado napolitano.
+En 1830, en Nápoles, abrió sus puertas [Antica Port’Alba](https://www.anticapizzeriaportalba.com/), el primer restaurante en vender pizza a los locales. Desde aquel horno ancestral que mantiene sus puertas abiertas al público, como símbolo de tradición y parte de la historia universal. La pizza comenzó a popularizarse y conquistar el paladar del mundo. Dando origen a nuevas variaciones como la pizza al estilo norteamericano, rindiendo tributo al legado napolitano.
 
-## Preparación
+Adaptándose rápidamente a los gustos regionales, surgieron variaciones en cada elemento que compone una pizza: la masa, salsa y cobertura, los cuales profundizaré a continuación.
 
-Adaptándose rápidamente a los gustos regionales, surgieron variaciones en la salsa, cubierta y masa. Ya sea una masa esponjosa, rústica y alveolos grandes al estilo napolitano, o una más aireosa, ligera y crujiente al estilo newyorkino. En ese sentido, a pesar que los ingredientes siempre son los mismos, las características de la masa variarán de acuerdo a la técnica que se aplique. De esta manera, la clave del éxito para hacer una buena masa de pizza o pan, no solo depende de los ingredientes, sino en una decisión previa, estratégica que todo maestro debe tomar: el prefermento. Que dotará e impregnará la personalidad y el deseo del chef en su platillo.
+## Masa
+
+Ya sea una masa esponjosa, rústica y alveolos grandes al estilo napolitano, o una más aireosa, ligera y crujiente al estilo newyorkino. En ese sentido, a pesar que los ingredientes siempre son los mismos, las características de la masa variarán de acuerdo a la técnica que se aplique. De esta manera, la clave del éxito para hacer una buena masa de pizza o pan, no solo depende de los ingredientes, sino en una decisión previa, estratégica que todo maestro debe tomar: el prefermento. Que dotará e impregnará la personalidad y el deseo del chef en su platillo.
 
 > Una masa aromática, con sabores complejos no se crean en cuestión de horas. Una larga fermentación con preferermentos dotará a la masa elasticidad, textura y sabor.
 
@@ -39,8 +41,32 @@ De acuerdo al estilo que quiera alcanzar, consulte esta tabla, recuperada de [pi
 | Detroit Style Pizza | 65-70% | 2-2.5% | 0-2% | 1-3% |
 | Industrial Style Pizza | 55-58% | 2-2.5% | 1-3% | 1-5% |
 
-Con la base lista, ahora es momento del segundo componente, frescura, acidez y aroma contenida en la salsa de tomate. Donde se mezclan los ingredientes más clásicos: la sal, el azúcar, el orégano, el ajo y las hojas de albahaca. Y vertidas, en la masa, en la proporción adecuada. Sería cuestión de colocar la cobertura favorita del público.
+## Salsa
+
+Con la base lista, es momento de dotar frescura, acidez y aroma a la pizza. Un buen resultado no bastará con la selección de ingredientes de primera, sino de manejar la consistencia adecuada y mantener el grado de acidez deseado. Cocer o no es la cuestión, si desea un sabor más concentrado, notas de acidez más leves y textura, hierva la salsa por 10 minutos. Caso contrario, la acidez propia del tomate predominará. A continuación tiene una tabla de frecuencia de uso y una receta de referencia elaborada por [Charlie Anderson](https://www.youtube.com/watch?v=t9xRdKVgOHA&t).
+
+| Frecuencia de uso | Ingrediente |
+| - | - |
+| Esencial | Tomates / Sal / Azúcar / Orégano |
+| A veces añadido | Ajo / Albahaca / Aceite de Oliva |
+| Raramente añadido | Pimienta / Cebolla |
+
+- Tomates: 800 gr
+- Sal: 2 gr
+- Ajo: 1/4 diente
+- Orégano: 2 cdas
+- Hojas de Albahaca: 14 hojas
+
+## Cobertura
+
+Mis favoritas.
+
+| Nombre | Ingredientes |
+| - | - |
+| Hawaiana | Jamón / Piña |
+| Pepperoni | Pepperoni |
+| The Works | Jamón / Cebolla / Blanca / Pimientos |
+
+> Agregar queso mozarella y parmesano rallado.
 
 🍳 Provecho
-
-> Profundizaré en la receta en los próximos días o semanas.
