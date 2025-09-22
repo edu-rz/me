@@ -22,7 +22,7 @@ Así pues lectores, queda en sus manos decidir qué gusto darle a su pizza, car�
 
 > Si deseas elaborar un prefermento, aparta primero el 30% de la harina total (180 gr) junto con la proporción correspondiente de agua y levadura para prepararlo.
 
-- Harina: 600 gr
+- Harina 00: 600 gr
 - Agua: 400 ml (≈ 66% hidratación)
 - Levadura seca: 2 gr
 - Miel: 2 gr
@@ -59,14 +59,28 @@ Con la base lista, es momento de dotar frescura, acidez y aroma a la pizza. Un b
 
 ## Cobertura
 
-Mis favoritas.
+### Mis coberturas favoritas
 
 | Nombre | Ingredientes |
 | - | - |
 | Hawaiana | Jamón / Piña |
+| The Works | Jamón / Cebolla Blanca / Pimientos |
 | Pepperoni | Pepperoni |
-| The Works | Jamón / Cebolla / Blanca / Pimientos |
 
 > Agregar queso mozarella y parmesano rallado.
+
+### Aderezo para potenciar la masa
+
+- 6 dientes de ajo sancochados
+- Aceite de oliva
+- Orégano
+- Sal
+- Pimienta
+
+### Topping SUS
+
+- 60 ml Vinagre balsámico
+- 15 gr Azúcar
+- 1/2 estrella de anis
 
 🍳 Provecho

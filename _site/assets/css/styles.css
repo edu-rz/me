@@ -153,6 +153,10 @@ table {
   margin: 1.5em 0;
   font-size: 0.95rem;
   background: var(--color-bg);
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  align-self: center;
 }
 
 table th,
