@@ -8,4 +8,17 @@
 ## Contenidos
 
 - [🥘 Cocina](./docs/cocina/cocina.md) - recetas y sus secretos
-- [🌿 Jardinería](./docs/jardineria/jardineria.md) - plantas y sus secretos
+- [🌿 Jardinería & Estética](./docs/jardineria/jardineria.md) - plantas y sus secretos
+- [🏋️‍♀️ Gym & Estilo de Vida](./docs/gym-estilo-vida/gym-estilo-vida.md) - por una vida con mejores hábitos
+
+## Ideas
+
+- Gestión de un Jardín Digital
+- Creando un microambiente tropical en Lima (Humidificador Casero)
+- Gestión de tiempo entre proyectos tech y hobbies.
+- Bagels
+- Plan: de Inglés B2 a C1
+- Certificaciones en IA & cloud
+- Esgrima verbal
+- Habilidades blandas en la práctica
+- Desarrollando empatía para conectar

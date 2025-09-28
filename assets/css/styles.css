@@ -180,3 +180,7 @@ table tr:hover {
   color: var(--color-bg);
   transition: background 0.2s ease;
 }
+
+img {
+  width: 100%;
+}

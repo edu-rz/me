@@ -4,9 +4,7 @@ layout: default
 
 # Pizza
 
-En 1830, en Nápoles, abrió sus puertas [Antica Port’Alba](https://www.anticapizzeriaportalba.com/), el primer restaurante en vender pizza a los locales. Desde aquel horno ancestral que mantiene sus puertas abiertas al público, como símbolo de tradición y parte de la historia universal. La pizza comenzó a popularizarse y conquistar el paladar del mundo. Dando origen a nuevas variaciones como la pizza al estilo norteamericano, rindiendo tributo al legado napolitano.
-
-Adaptándose rápidamente a los gustos regionales, surgieron variaciones en cada elemento que compone una pizza: la masa, salsa y cobertura, los cuales profundizaré a continuación.
+En 1830, en Nápoles, [Antica Port’Alba](https://www.anticapizzeriaportalba.com/) abrió sus puertas, el primer restaurante en vender pizza a los locales. Desde aquel horno ancestral que mantiene sus puertas abiertas al público, como símbolo de tradición y parte de la historia universal. La pizza comenzó a popularizarse y conquistar el paladar del mundo. Dando origen a nuevas variaciones en cada elemento que compone una pizza: masa, salsa y toppings, y así, emergiendo estilos como la pizza romana, siliciana, de nueva york, detroit y más, rindiendo tributo al legado napolitano.
 
 ## Masa
 
@@ -82,5 +80,14 @@ Con la base lista, es momento de dotar frescura, acidez y aroma a la pizza. Un b
 - 60 ml Vinagre balsámico
 - 15 gr Azúcar
 - 1/2 estrella de anis
+
+## Consejos Finales
+
+Para orientar y conseguir un mejor resultado, he listado claves para preparar pizza extraído del libro The Elements of Pizza.
+
+- Ajusta la hidratación de la masa a tu horno y su temperatura de horneado.
+- Ajusta el tiempo y temperatura de la masa de acuerdo a la estación y ambiente.
+- La segunda fermentación debe ser más larga que la primera.
+- La sal ayuda a ralentizar la fermentación. (útil para que la 2da fermentación no se realice en el refrigerador)
 
 🍳 Provecho
