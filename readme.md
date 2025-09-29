@@ -17,7 +17,6 @@
 - Creando un microambiente tropical en Lima (Humidificador Casero)
 - Gestión de tiempo entre proyectos tech y hobbies.
 - Bagels
-- Plan: de Inglés B2 a C1
 - Certificaciones en IA & cloud
 - Esgrima verbal
 - Habilidades blandas en la práctica
