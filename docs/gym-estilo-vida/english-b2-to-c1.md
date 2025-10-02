@@ -4,34 +4,54 @@ layout: default
 
 # De Inglés B2 a C1
 
-Para asegurar un mejor futuro con mayores ingresos y un mejor estilo de vida. El inglés es fundamental, no solo leerlo o escribirlo, sino hablarlo y conversar con naturalidad para aumentar mis capacidades para obtener mejores oportunidades laborales. Por ello, el siguiente plan me permitirá mejorar mi inglés, enfocado en el speaking.
+Para asegurar un mejor futuro con mayores ingresos y un mejor estilo de vida. El inglés es fundamental, no solo leerlo o escribirlo, sino hablarlo y conversar con naturalidad para aumentar mis capacidades para obtener mejores oportunidades laborales. Por ello, el siguiente plan que deberá ser realizado a diario durante una hora, me permitirá mejorar mi inglés, enfocado en el speaking.
 
-## Preparar un banco de frases profesionales
+## Sesión de Estudio
 
-Make short sentences with them, related to your real work.
+### ◼ Calentamiento & Fluidez
 
-- The project is progressing well.
-- The next priority will be…
-- One possible challenge could be…
+Tome o invente alguna de las siguientes frases y recítelo en voz alta. Luego repítalo con sus propias palabras sin ver la frase. Por último, crea de 2 a 3 variaciones.
 
-👉 Goal: expand vocabulary for meetings so you sound more natural.
+- The project is going well. So far, I’ve completed the services and repositories. The next step is to finish the controllers and expose the endpoints.
+- I want to reach a C1 level in speaking, so I’m putting together a plan to improve my English for professional communication.
+- To land my dream job, I need to upload several documents, so the HR department can review them and move forward with the hiring process.
 
-## Verb tense drill
+**Objetivo**: Soltar la lengua y trabajar el cerebro.
 
-- Practice conditionals + present perfect.
+### ◼ Practicar Gramática
 
-- If I don’t _, I will _
-- So far, I have _, and the next step is _
+#### Condicionales
 
-- If I don’t face issues, I will finish the tests by Friday.
-- So far, I have completed the services, and the next step is to deploy.
+Recite 5 oraciones con la siguiente estructura.
 
-👉 Goal: strengthen automatic grammar use.
+- If I don’t face technical issues, I will finish the API by Friday.
+- If I had more resources, I would speed up the deployment process.
+- If the meeting hadn’t been rescheduled, we would have closed the task earlier.
+- If the client approves the design, we will start development next week.
+- If I were in charge, I would improve the documentation process.
 
-## Warm-up
+#### Present Perfect
 
-- Pick one small work update (real or imagined).
-- Example: “Today I set up the API and connected it to the database.”
-- Say it out loud twice: once normally, once more slowly, focusing on grammar and pronunciation.
+Recite 5 oraciones con la siguiente estructura imaginando que estás en un daily.
 
-👉 Goal: train your mouth to form clear sentences quickly.
+- So far, I have completed the authentication module. The next step is to implement authorization.
+- So far, I have finished fixing the critical bugs. The next step is to test the integration.
+- So far, I have reviewed the user stories. The next step is to assign tasks to the team.
+- So far, I have prepared the deployment scripts. The next step is to validate them in staging.
+- So far, I have written the documentation draft. The next step is to get feedback from the team.
+
+### ◼ Vocabulario & Frases
+
+Elabore y recite 5 oraciones con las siguientes frases.
+
+- **The project is progressing well.** *The project is progressing well, but we still need to align with the client on a few requirements.*
+- **The biggest challenge so far has been…** *The biggest challenge so far has been integrating the new API with the legacy system.*
+- **The next priority will be…** *The next priority will be optimizing the database queries to improve performance.*
+- **From a technical perspective…** *From a technical perspective, the migration to the cloud is the most critical step.*
+- **If time allows, I’d like to…** *If time allows, I’d like to refactor some of the older code to improve maintainability.*
+
+### ◼ English Shadowing
+
+Practique English Shadowing avanzado. El detalle de cómo realizarlo está aquí: [EngFluent](https://www.youtube.com/watch?v=awIXN5LgWKY)
+
+🍀 Suerte :)
