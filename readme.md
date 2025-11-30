@@ -10,6 +10,7 @@
 - [🥘 Cocina](./docs/cocina/cocina.md) - recetas y sus secretos
 - [🌿 Jardinería & Estética](./docs/jardineria/jardineria.md) - plantas y sus secretos
 - [🏋️‍♀️ Gym & Estilo de Vida](./docs/gym-estilo-vida/gym-estilo-vida.md) - por una vida con mejores hábitos
+- [💻 Informática](./docs/informatica/informatica.md) - sistemas e informática
 
 ## Ideas
 
@@ -21,3 +22,6 @@
 - Esgrima verbal
 - Habilidades blandas en la práctica
 - Desarrollando empatía para conectar
+- Plan de Culturización
+
+<!-- bundle exec jekyll serve -->
