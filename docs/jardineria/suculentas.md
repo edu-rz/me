@@ -6,7 +6,7 @@ layout: default
 
 Registro de mis suculentas y su ambiente ideal, tanto como sustrato, iluminación, temperatura, entre otros.
 
-| Nombre  | Iluminación |
+| Nombre | Iluminación |
 | - | - |
 | Echeveria Pallida | Sol directo. No el de media mañana. |
 | Echeveria Elegans | Sol directo. No el de media mañana. |

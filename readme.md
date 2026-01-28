@@ -1,5 +1,5 @@
 
-# 🦉 Bienvenido
+# Bienvenido
 
 ```txt
   Al contenedor de mis ideas, aficiones e inclinaciones escritas por mero placer.
@@ -9,8 +9,8 @@
 
 - [🥘 Cocina](./docs/cocina/cocina.md) - recetas y sus secretos
 - [🌿 Jardinería & Estética](./docs/jardineria/jardineria.md) - plantas y sus secretos
-- [🏋️‍♀️ Gym & Estilo de Vida](./docs/gym-estilo-vida/gym-estilo-vida.md) - por una vida con mejores hábitos
 - [💻 Informática](./docs/informatica/informatica.md) - sistemas e informática
+- [🎲 Varios](./docs/varios/varios.md) - temas variados
 
 ## Ideas
 
