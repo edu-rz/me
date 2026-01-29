@@ -12,7 +12,7 @@ No escribo desde la soberbia, sino desde la ignorancia consciente. Sé lo básic
 
 ## Paso de Hitler en Alemania
 
-Hitler tuvo una juventud llena de fracasos e infortunios: pasión por el arte frustrada, figura paterna autoritaria y abusiva, pobreza y soledad en Viena. Sumergido en un gran remordimiento, desahogaba sus frustraciones enalteciendo la `raza` aria y profesando el odio absurdo a los judíos.
+Hitler tuvo una juventud llena de fracasos e infortunios: pasión por el arte frustrada, figura paterna autoritaria y abusiva, pobreza y soledad en Viena. Sumergido en un gran remordimiento, desahogaba sus frustraciones enalteciendo la `raza aria` y profesando el odio absurdo a los judíos.
 
 En sus inicios en la política fue visto como un fanático antisemita, pero también como un orador excepcional. Su verdadero poder no residía en lo que decía, sino cómo lo decía: sabía conectar emocionalmente, amplificar sus frustraciones y ofrecer un relato coherente, aunque profundamente no lo fuera. Convenció a todo un país a realizar actos inhumanos y que no sean juzgados como tal. Tenía las cualidades para ser grande, y el momento adecuado para transmitir su ideología. La sociedad alemana estaba sumida en una gran depresión, causada por la deuda y derrota de la primera guerra mundial. Sus discursos efusivos, electrizantes e hipnotizadores, tenian como argumento recuperar lo que les pertenece a la raza aria, engrandecer Alemania y formar el imperio más grande nunca antes visto, plasmando en él mísmo un "mesías" y a su vez culpando de sus infortunios a los judios.
 

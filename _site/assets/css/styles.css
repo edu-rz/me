@@ -1,23 +1,27 @@
-/* 🎨 Paleta */
 :root {
-  --color-primary: #473e44; /* oscuro elegante */
-  --color-secondary: rgb(217, 150, 82); /* cálido/dorado */
-  --color-accent: rgb(156, 132, 140); /* tono intermedio */
+  --color-primary: #e2e8f0;
+  --color-secondary: #06b6d4;
+  --color-accent: #137b8d;
 
   --color-text: var(--color-primary);
-  --color-text-light: #444;
-  --color-bg: #ffffff;
-  --color-bg-alt: #fdfaf7;
-  --color-border: rgba(0, 0, 0, 0.15);
+  --color-text-light: rgba(226, 232, 240, 0.85);
+  --color-bg: #0c1426;
+  --color-bg-alt: rgba(37, 51, 82, 0.85);
+  --color-border: rgba(226, 232, 240, 0.7);
 }
 
 @font-face {
-  font-family: manrope;
-  src: url(../fonts/Manrope-VariableFont_wght.ttf);
+  font-family: hubotsans;
+  src: url(../fonts/HubotSans-VariableFont_wdth,wght.ttf);
+}
+
+@font-face {
+  font-family: monasans;
+  src: url(../fonts/MonaSans-VariableFont_wdth,wght.ttf);
 }
 
 * {
-  font-family: "manrope" !important;
+  font-family: "monasans" !important;
   color: var(--color-text);
   text-align: justify;
 }
@@ -33,6 +37,7 @@
 
 header {
   padding-top: 48px !important;
+  font-family: "hubotsans" !important;
 }
 
 footer {
@@ -47,7 +52,9 @@ a {
   color: var(--color-secondary);
   text-decoration: none;
   border-bottom: 1px solid var(--color-border);
-  transition: background 300ms, color 300ms;
+  transition:
+    background 300ms,
+    color 300ms;
 }
 
 a:hover {
@@ -100,6 +107,14 @@ h1,
 h2,
 h3,
 h4,
+h5 {
+  font-family: "hubotsans" !important;
+}
+
+h1,
+h2,
+h3,
+h4,
 h5,
 p {
   color: var(--color-primary);
@@ -137,14 +152,18 @@ p {
   border-radius: 4px;
 }
 
-
 blockquote {
   border-left: 4px solid var(--color-border);
   background-color: var(--color-bg-alt);
   margin: 0;
-  padding: 0 16px;
+  padding: 6px 16px;
   color: var(--color-text-light);
   font-style: italic;
+  border-radius: 6px;
+
+  p {
+    margin: 0px !important;
+  }
 }
 
 table {
@@ -167,7 +186,7 @@ table td {
 }
 
 table th {
-  background: var(--color-accent);
+  background: var(--color-primary);
   color: var(--color-bg);
   text-transform: uppercase;
 }
@@ -180,4 +199,12 @@ table tr:hover {
 
 img {
   width: 100%;
+}
+
+pre {
+  border-radius: 6px;
+}
+
+code {
+  color: var(--color-secondary);
 }

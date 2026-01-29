@@ -90,4 +90,4 @@ Para orientar y conseguir un mejor resultado, he listado claves para preparar pi
 - La segunda fermentación debe ser más larga que la primera.
 - La sal ayuda a ralentizar la fermentación. (útil para que la 2da fermentación no se realice en el refrigerador)
 
-🍳 Provecho
+Provecho

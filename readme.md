@@ -1,16 +1,16 @@
 
-# Bienvenido
+# Saludos
 
 ```txt
-  Al contenedor de mis ideas, aficiones e inclinaciones escritas por mero placer.
+  simple mortal
 ```
 
 ## Contenidos
 
-- [🥘 Cocina](./docs/cocina/cocina.md) - recetas y sus secretos
-- [🌿 Jardinería & Estética](./docs/jardineria/jardineria.md) - plantas y sus secretos
-- [💻 Informática](./docs/informatica/informatica.md) - sistemas e informática
-- [🎲 Varios](./docs/varios/varios.md) - temas variados
+- [Cocina](./docs/cocina/cocina.md) - recetas y sus secretos
+- [Jardinería & Estética](./docs/jardineria/jardineria.md) - plantas y sus secretos
+- [Informática](./docs/informatica/informatica.md) - sistemas e informática
+- [Varios](./docs/varios/varios.md) - temas variados
 
 ## Ideas
 
