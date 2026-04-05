@@ -1,8 +1,7 @@
-
 # Saludos
 
 ```txt
-  simple mortal
+  (̿▀̿ ̿Ĺ̯̿̿▀̿ ̿)̄
 ```
 
 ## Contenidos
