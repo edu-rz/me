@@ -8,14 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/me/assets/css/styles.css">
 </head>
-
 <body class="markdown-body">
   <header>
     <a href="/me/">edudedu</a>
-    <!-- <nav>
-      <a href="/me/">Inicio</a> |
-      <a href="/me/docs/">Docs</a>
-    </nav> -->
   </header>
 
   <main>
@@ -33,9 +28,74 @@
 
   </main>
 
+  <aside id="toc"></aside>
+
   <footer>
     <p>&copy; 2026 — edudedu</p>
   </footer>
 </body>
+<script>
+  const toc = document.getElementById("toc");
+  const headings = document.querySelectorAll("h1, h2, h3");
 
+  headings.forEach((h, i) => {
+    const id = "heading-" + i;
+    h.id = id;
+
+    const a = document.createElement("a");
+    a.href = "#" + id;
+    a.textContent = h.textContent;
+
+    if (h.tagName === "H2") a.style.marginLeft = "10px";
+    if (h.tagName === "H3") a.style.marginLeft = "20px";
+
+    toc.appendChild(a);
+  });
+</script>
+<script>
+  const links = document.querySelectorAll("#toc a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    document.querySelectorAll("h1, h2, h3").forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (scrollY >= sectionTop - 100) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    links.forEach((a) => {
+      a.classList.remove("active");
+      if (a.getAttribute("href") === "#" + current) {
+        a.classList.add("active");
+      }
+    });
+  });
+</script>
+<script>
+  function typeEffect(element, speed = 40) {
+    const text = element.textContent;
+    element.textContent = "";
+    element.classList.add("typing");
+
+    let i = 0;
+
+    function typing() {
+      if (i < text.length) {
+        element.textContent += text.charAt(i);
+        i++;
+        setTimeout(typing, speed);
+      } else {
+        element.classList.remove("typing");
+      }
+    }
+
+    typing();
+  }
+
+  // solo aplicar al h1
+  const title = document.querySelector("h1");
+  if (title) typeEffect(title);
+</script>
 </html>
