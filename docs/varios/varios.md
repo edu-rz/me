@@ -9,3 +9,4 @@ nav_order: 1
 
 - [¿Realmente el Nazismo fue malo?](./nazismo.md)
 - [¿Y si no se trata de descubrir quién eres, sino de diseñarlo?](./identidad.md)
+- [¿Por qué en sociedades más “avanzadas” la religión pierde fuerza?](./religion.md)

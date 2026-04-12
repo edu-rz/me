@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/me/assets/images/favicon.ico">
+  <title>Generative AI | edudedu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/me/assets/css/styles.css">
+</head>
+<body class="markdown-body">
+  <header>
+    <a href="/me/">edudedu</a>
+  </header>
+
+  <main>
+    <h1 id="generative-ai">Generative AI</h1>
+
+<p>La IA generativa es un subcampo del deep learning, y al igual que los modelos de este campo. La ig generativa es entrenada con data no etiquetada y su objetivo es generar los mismos datos de entrada. ojo que no es como el resto de modelos que buscan identificar o agrupar datos, sino generar nuevos datos que sean similares a los inputs.</p>
+
+<p><img src="https://communities.sas.com/t5/image/serverpage/image-id/93362i9D7F79AA3B09013B/image-dimensions/393x380?v=v2" alt="alt text" /></p>
+
+<h2 id="foundation-model">Foundation Model</h2>
+
+<p>Es un subtipo de la ia generativa, se trata de modelos que son entrenados con una <strong>gran cantidad de datos</strong> y datos <strong>variados</strong>, lo que le permite realizar varias tareas como resumir texto, escribir texto, generar imágenes, extraer información …</p>
+
+<blockquote>
+  <p>Para realizar foundation models, tienes que ser millonario, ya que el precio de entrenamiento es muy elevado. Igualmente hay foundation models gratis que se pueden utilizar desde casa.</p>
+</blockquote>
+
+<h2 id="llms">LLMs</h2>
+
+<p>Otro tipo de ia generativa, que es muy buena para recordar información en largos periodos de tiempo, esto se debe al diseño de su arquitectura. Es usado para tareas relacionada con texto.</p>
+
+<h3 id="cómo-funciona-para-texto">Cómo funciona para texto</h3>
+
+<p>Los modelos de toda esta sección son no determinísticos, me refiero a que si realizas un prompt, no te va a dar el mismo resultado. A grandes rasgos, a partir de un prompt, el modelo calcula cuál es la próxima palabra más probable.</p>
+
+<h3 id="cómo-funciona-para-imágenes">Cómo funciona para imágenes</h3>
+
+<p>El proceso para generar imágenes se llama <em>Stable Diffusion</em>. El proceso general trata de agregar ruido a una imagen, al punto que no se entiende lo que se ve y luego se entrena el modelo para que reconstruya la imagen con ruido al punto que cumpla con el prompt del usuario.</p>
+
+  </main>
+
+  <aside id="toc"></aside>
+
+  <footer>
+    <p>&copy; 2026 — edudedu</p>
+  </footer>
+</body>
+<script>
+  const toc = document.getElementById("toc");
+  const headings = document.querySelectorAll("h1, h2, h3");
+
+  headings.forEach((h, i) => {
+    const id = "heading-" + i;
+    h.id = id;
+
+    const a = document.createElement("a");
+    a.href = "#" + id;
+    a.textContent = h.textContent;
+
+    if (h.tagName === "H2") a.style.marginLeft = "10px";
+    if (h.tagName === "H3") a.style.marginLeft = "20px";
+
+    toc.appendChild(a);
+  });
+</script>
+<script>
+  const links = document.querySelectorAll("#toc a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    document.querySelectorAll("h1, h2, h3").forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (scrollY >= sectionTop - 100) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    links.forEach((a) => {
+      a.classList.remove("active");
+      if (a.getAttribute("href") === "#" + current) {
+        a.classList.add("active");
+      }
+    });
+  });
+</script>
+<script>
+  function typeEffect(element, speed = 40) {
+    const text = element.textContent;
+    element.textContent = "";
+    element.classList.add("typing");
+
+    let i = 0;
+
+    function typing() {
+      if (i < text.length) {
+        element.textContent += text.charAt(i);
+        i++;
+        setTimeout(typing, speed);
+      } else {
+        element.classList.remove("typing");
+      }
+    }
+
+    typing();
+  }
+
+  // solo aplicar al h1
+  const title = document.querySelector("h1");
+  if (title) typeEffect(title);
+</script>
+</html>

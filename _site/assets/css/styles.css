@@ -114,6 +114,7 @@ h3,
 h4 {
   font-family: "hubotsans" !important;
   letter-spacing: -0.5px;
+  color: var(--color-text);
 }
 
 h1 {
@@ -126,7 +127,6 @@ h2 {
   font-size: 1.6rem;
   margin-top: 40px;
   margin-bottom: 12px;
-  color: var(--color-primary);
 }
 
 h3 {

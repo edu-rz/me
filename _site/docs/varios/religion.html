@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/me/assets/images/favicon.ico">
+  <title>¿Por qué en sociedades más “avanzadas” la religión pierde fuerza? - 11/04/2025 | edudedu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/me/assets/css/styles.css">
+</head>
+<body class="markdown-body">
+  <header>
+    <a href="/me/">edudedu</a>
+  </header>
+
+  <main>
+    <h1 id="por-qué-en-sociedades-más-avanzadas-la-religión-pierde-fuerza---11042025">¿Por qué en sociedades más “avanzadas” la religión pierde fuerza? - 11/04/2025</h1>
+
+<p>Desde hace mucho se plantea esta pregunta, y no solo se ha quedado como una incógnita. Hay numerosos estudios que investigaron la relación entre la modernidad de las sociedades, el nivel de educación y su grado de compromiso con la religión. De esta manera se plantean preguntas como: ¿a mayor nivel de educación, la religión pierde fuerza? o ¿en países subdesarrollados son más devotos a la religión?</p>
+
+<p>Las sociedades consideradas “avanzadas” son aquellas que están desarrolladas económicamente, tecnológicamente, tienen acceso a un buen sistema de salud y educativo. En general a países primermundistas como EEUU, Rusia o Alemania, aunque estos no tienen las mismas prácticas religiosas.</p>
+
+<p>Como bien es sabido, las sociedades modernas tienen una educación envidiable, lo que permite a la población a tener mayor acceso a información científica. Esto lleva a cuestionar prácticas tradicionales como la religión, ya que cuesta creer en eventos sin evidencias concretas. Obligándonos a rechazar la religión o en el mejor de los casos, reinterpretarla.</p>
+
+<p>Por otro lado, en las iglesias suelen ocurrir eventos que van en contra de la religión, desde cualquier punto que se analice. Concretamente, en el contexto peruano ocurrió un escándalo en el que el arzobispo Cipriani fue acusado de cometer abuso sexual mientras pertenecía a la iglesia. Este tipo de actos incomoda aleja a los fieles.</p>
+
+<p>Como otro factor, las sociedades más “avanzadas” suelen seguir la misma tendencia y valores, se caracterizan por incitar al consumismo e individualismo. Se prioriza el éxito personal, más que el colectivo. De cierto sentido, esto reduce la participación en prácticas religiosas.</p>
+
+<p>En cambio, la realidad es distinta en las sociedades menos “desarrolladas”. En el contexto estadounidense, se ha descubierto la siguiente tendencia: <a href="https://www.pewresearch.org/religion/2017/04/26/in-america-does-more-education-equal-less-religion/">Pew Research</a> indica que las personas con menor educación suelen ser más participativas en las prácticas religiosas. Esto se puede deber, a que en situaciones de vulnerabilidad solemos buscar un refugio que nos de la esperanza de continuar. Es aquí donde la religión es crucial para la estabilidad mental.</p>
+
+<p>De esta manera, el acceso a la información, escándalos de la iglesia y el individualismo de las sociedades modernas con mayor educación propician un ambiente para el crecimiento del ateismo. Igualmente, la religión, aún sigue siendo de gran importancia en la sociedad, pero tiene una tendencia a la baja.</p>
+
+  </main>
+
+  <aside id="toc"></aside>
+
+  <footer>
+    <p>&copy; 2026 — edudedu</p>
+  </footer>
+</body>
+<script>
+  const toc = document.getElementById("toc");
+  const headings = document.querySelectorAll("h1, h2, h3");
+
+  headings.forEach((h, i) => {
+    const id = "heading-" + i;
+    h.id = id;
+
+    const a = document.createElement("a");
+    a.href = "#" + id;
+    a.textContent = h.textContent;
+
+    if (h.tagName === "H2") a.style.marginLeft = "10px";
+    if (h.tagName === "H3") a.style.marginLeft = "20px";
+
+    toc.appendChild(a);
+  });
+</script>
+<script>
+  const links = document.querySelectorAll("#toc a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    document.querySelectorAll("h1, h2, h3").forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (scrollY >= sectionTop - 100) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    links.forEach((a) => {
+      a.classList.remove("active");
+      if (a.getAttribute("href") === "#" + current) {
+        a.classList.add("active");
+      }
+    });
+  });
+</script>
+<script>
+  function typeEffect(element, speed = 40) {
+    const text = element.textContent;
+    element.textContent = "";
+    element.classList.add("typing");
+
+    let i = 0;
+
+    function typing() {
+      if (i < text.length) {
+        element.textContent += text.charAt(i);
+        i++;
+        setTimeout(typing, speed);
+      } else {
+        element.classList.remove("typing");
+      }
+    }
+
+    typing();
+  }
+
+  // solo aplicar al h1
+  const title = document.querySelector("h1");
+  if (title) typeEffect(title);
+</script>
+</html>
