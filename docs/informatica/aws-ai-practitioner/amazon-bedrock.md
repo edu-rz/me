@@ -16,4 +16,6 @@ De todos los modelos, cuáles debería elegir, existen mas de 100, pero debes el
 
 El nivel de customización, hay modelos que permiten configurasr la temperatura, context windows, ...
 
+> Amazon Titan: Foundation model from aws
+
 

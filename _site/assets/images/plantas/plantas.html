@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/me/assets/images/favicon.ico">
+  <title>Plantas | edudedu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/me/assets/css/styles.css">
+</head>
+<body class="markdown-body">
+  <header>
+    <a href="/me/">edudedu</a>
+  </header>
+
+  <main>
+    <h1 id="plantas">Plantas</h1>
+
+<h2 id="04-2026">04-2026</h2>
+<p><img src="/assets/images/plantas/04-2026/1.webp" alt="alt text" /></p>
+
+<h2 id="03-2026">03-2026</h2>
+<p><img src="/assets/images/plantas/03-2026/1.webp" alt="alt text" /></p>
+
+<h2 id="el-apogeo---01-2026">El Apogeo - 01-2026</h2>
+<p><img src="/assets/images/plantas/01-2026/1.webp" alt="alt text" />
+<img src="/assets/images/plantas/01-2026/2.webp" alt="alt text" /></p>
+
+<h2 id="12-2025">12-2025</h2>
+<p><img src="/assets/images/plantas/12-2025/1.webp" alt="alt text" />
+<img src="/assets/images/plantas/12-2025/2.webp" alt="alt text" /></p>
+
+<h2 id="11-2025">11-2025</h2>
+<p><img src="/assets/images/plantas/11-2025/1.webp" alt="alt text" /></p>
+
+<h2 id="10-2025">10-2025</h2>
+<p><img src="/assets/images/plantas/10-2025/1.webp" alt="alt text" />
+<img src="/assets/images/plantas/10-2025/2.webp" alt="alt text" /></p>
+
+<h2 id="09-2025">09-2025</h2>
+<p><img src="/assets/images/plantas/09-2025/1.webp" alt="alt text" />
+<img src="/assets/images/plantas/09-2025/2.webp" alt="alt text" /></p>
+
+<h2 id="08-2025">08-2025</h2>
+<p><img src="/assets/images/plantas/08-2025/1.webp" alt="alt text" />
+<img src="/assets/images/plantas/08-2025/2.webp" alt="alt text" />
+<img src="/assets/images/plantas/08-2025/3.webp" alt="alt text" /></p>
+
+<h2 id="07-2025">07-2025</h2>
+<p><img src="/assets/images/plantas/07-2025/1.webp" alt="alt text" />
+<img src="/assets/images/plantas/07-2025/2.webp" alt="alt text" /></p>
+
+<h2 id="06-2025">06-2025</h2>
+<p><img src="/assets/images/plantas/06-2025/1.webp" alt="alt text" /></p>
+
+<h2 id="05-2025">05-2025</h2>
+<p><img src="/assets/images/plantas/05-2025/1.webp" alt="alt text" /></p>
+
+<h2 id="el-cambio---04-2025">El Cambio - 04-2025</h2>
+<p><img src="/assets/images/plantas/04-2025/1.webp" alt="alt text" />
+<img src="/assets/images/plantas/04-2025/2.webp" alt="alt text" /></p>
+
+<h2 id="03-2025">03-2025</h2>
+<p><img src="/assets/images/plantas/03-2025/1.webp" alt="alt text" />
+<img src="/assets/images/plantas/03-2025/2.webp" alt="alt text" />
+<img src="/assets/images/plantas/03-2025/3.webp" alt="alt text" />
+<img src="/assets/images/plantas/03-2025/4.webp" alt="alt text" /></p>
+
+<h2 id="the-origins---02-2025">The Origins - 02-2025</h2>
+<p><img src="/assets/images/plantas/02-2025/1.webp" alt="alt text" />
+<img src="/assets/images/plantas/02-2025/2.webp" alt="alt text" />
+<img src="/assets/images/plantas/02-2025/3.webp" alt="alt text" /></p>
+
+  </main>
+
+  <aside id="toc"></aside>
+
+  <footer>
+    <p>&copy; 2026 — edudedu</p>
+  </footer>
+</body>
+<script>
+  const toc = document.getElementById("toc");
+  const headings = document.querySelectorAll("h1, h2, h3");
+
+  headings.forEach((h, i) => {
+    const id = "heading-" + i;
+    h.id = id;
+
+    const a = document.createElement("a");
+    a.href = "#" + id;
+    a.textContent = h.textContent;
+
+    if (h.tagName === "H2") a.style.marginLeft = "10px";
+    if (h.tagName === "H3") a.style.marginLeft = "20px";
+
+    toc.appendChild(a);
+  });
+</script>
+<script>
+  const links = document.querySelectorAll("#toc a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    document.querySelectorAll("h1, h2, h3").forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (scrollY >= sectionTop - 100) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    links.forEach((a) => {
+      a.classList.remove("active");
+      if (a.getAttribute("href") === "#" + current) {
+        a.classList.add("active");
+      }
+    });
+  });
+</script>
+<script>
+  function typeEffect(element, speed = 40) {
+    const text = element.textContent;
+    element.textContent = "";
+    element.classList.add("typing");
+
+    let i = 0;
+
+    function typing() {
+      if (i < text.length) {
+        element.textContent += text.charAt(i);
+        i++;
+        setTimeout(typing, speed);
+      } else {
+        element.classList.remove("typing");
+      }
+    }
+
+    typing();
+  }
+
+  // solo aplicar al h1
+  const title = document.querySelector("h1");
+  if (title) typeEffect(title);
+</script>
+</html>

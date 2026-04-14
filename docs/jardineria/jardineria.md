@@ -7,4 +7,5 @@ nav_order: 1
 
 ## Contenidos
 
+- [Plantas](./plantas.md)
 - [Suculentas](./suculentas.md)
