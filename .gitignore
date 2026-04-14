@@ -16,10 +16,6 @@ Thumbs.db
 .env
 .env.*
 
-# Salidas generadas
-*.md
-!README.md
-
 # Archivos temporales
 tmp/
 temp/
