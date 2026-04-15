@@ -29,6 +29,7 @@
   font-family: "monasans" !important;
   color: var(--color-text);
   text-align: justify;
+  scroll-behavior: smooth;
 }
 
 /* Fondo con gradiente */
@@ -164,7 +165,7 @@ code {
 blockquote {
   border-left: 3px solid var(--color-secondary);
   background: rgba(34, 211, 238, 0.04);
-  padding: 10px 16px;
+  padding: 1px 16px !important;
   margin: 0px;
   border-radius: 6px;
   font-style: italic;
@@ -244,7 +245,6 @@ main > * {
 /* activo */
 #toc a.active {
   color: var(--color-secondary);
-  transform: translateX(4px);
 }
 
 /* ocultar en mobile */
