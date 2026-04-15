@@ -23,4 +23,10 @@
 - Desarrollando empatía para conectar
 - Plan de Culturización
 
+## Últimos cambios
+
+<!-- START_COMMITS -->
+_Aquí se actualizarán automáticamente los últimos cambios_
+<!-- END_COMMITS -->
+
 <!-- bundle exec jekyll serve -->

@@ -4,3 +4,5 @@ url: "https://edu-rz.github.io"
 baseurl: "/me"   # ⚠️ importante, porque tu página no está en la raíz
 theme: null
 markdown: kramdown
+plugins:
+  - jekyll-git_metadata
