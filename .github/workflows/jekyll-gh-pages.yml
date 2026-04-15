@@ -28,7 +28,7 @@ jobs:
         run: |
           git log -5 --pretty=format:"- %s — %an (%h)" > commits.txt
 
-      - name: Inject commits into README
+      - name: Inject commits into readme
         run: |
           awk '
           /<!-- START_COMMITS -->/ {
@@ -41,16 +41,16 @@ jobs:
             skip=0
           }
           !skip { print }
-          ' README.md > README_new.md
+          ' readme.md > readme_new.md
 
-          mv README_new.md README.md
+          mv readme_new.md readme.md
 
-      - name: Commit README changes
+      - name: Commit readme changes
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add README.md
-          git commit -m "Update README with latest commits" || echo "No changes to commit"
+          git add readme.md
+          git commit -m "Update readme with latest commits" || echo "No changes to commit"
           git push
 
       - name: Setup Pages
