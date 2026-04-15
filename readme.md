@@ -26,7 +26,6 @@
 ## Últimos cambios
 
 <!-- START_COMMITS -->
-_Aquí se actualizarán automáticamente los últimos cambios_
-<!-- END_COMMITS -->
+- Fix case sensitivity for README file references — Eduardo Ramón (e17c24e)<!-- END_COMMITS -->
 
 <!-- bundle exec jekyll serve -->
