@@ -110,3 +110,24 @@ Métricas que nos permiten evaluar extrinsicamente al modelo
 | Cross Domain Performance | Habilidad del modelo para realizar tareas de distintos ámbitos.             |
 | Conversion Rate          | El porcentaje de usuarios que me visitan y se convierten en clientes.       |
 | Efficiency               | Evaluar uso de cómputo, disco, recursos en general.                         |
+
+## RAG and Knowledge Base
+RAG o por sus siglas Retrieval Augmented Generation. 
+
+Cuando quieras que tu modelo utilice información en específica que es de tu propiedad (llamada knowledge base) se utiliza esta técnica. Trata de tener una base de información en un formato en específico que el modelo utilizará como base para generar sus respuestas. 
+
+El flujo inicia cuando el usuario crea un prompt, a lo que un modelo recepciona e inyecta/augmenta más información (texto) que es recogida del knowledge base teniendo como resultado un prompt completo. Para lo que otro modelo recepciona y genera el mensaje de respuesta.
+
+![alt text](https://arrobasystem.com/cdn/shop/articles/rag-retrieval-augmented-generation-revolucionando-la-generacion-de-contenidos-con-inteligencia-artificial_960x502_crop_center.jpg?v=1736795434960w)
+
+
+El formato específico para aplicar RAG son los **Vector Database**, y para transformar la data se suele almacenarla en S3, luego se transforma en chunks (particiones) y luego se generarán embedding con algun modelo permitido (Amazon Titan, ...) para almacenarlo en un servicio de almacenamiento de vectores, tienes S3 Vectors, MongoDB, ...
+
+Fuente de datos para alimentar tu **Vector Database** son S3, Confluence, SharePoint, Salesforce, Websites ...
+
+## Guardrails
+
+Se encarga de controlar y filtrar los request que se realizan al modelo fundacional. Usualmente es usado para filtrar contenido dañino, irrespetuoso, que no está en el alcance del modelo o data muy sensible como tarjetas de crédito ...
+
+Ejemplo: Al chatbot de mercado libre le preguntas que puedes cocinar hoy, y te dice: eso no se, no fastidies xd.
+

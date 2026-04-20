@@ -25,3 +25,23 @@ Los modelos de toda esta sección son no determinísticos, me refiero a que si r
 ### Cómo funciona para imágenes
 
 El proceso para generar imágenes se llama *Stable Diffusion*. El proceso general trata de agregar ruido a una imagen, al punto que no se entiende lo que se ve y luego se entrena el modelo para que reconstruya la imagen con ruido al punto que cumpla con el prompt del usuario.
+
+## Conceptos
+### Tokenización
+Convertir texto en una secuencia de tokens. 
+
+Token: es una unidad de información. Existe tokenización por palabras o de subpalabra (en que la palabra se divide en varios tokens)
+
+![alt text](https://www.ionos.es/digitalguide/fileadmin/_processed_/d/2/csm_tokenizer-openai-ejemplo_027796a55e.webp)
+
+### Context window
+Puede tener varios significados dependiendo del contexto, pero en el de la IA Generativa, trata de qué tantos tokens puede un LLM considerar para generar texto. Mientras más grande el context window, habrá más información que la IA podrá tomar en cuenta. 
+> Más context window = mayor procesamiento: ten en cuenta al elegir un modelo.
+
+### Embeddings
+
+Es el proceso de convertir en vectores texto, imágenes o audio. A partir de un texto, lo tokenizas y por cada palabra, le asignas un vector n-dimensional.
+
+> Es muy útil capturar similitud entre palabras, por ejemplo felicidad y alegría serán más cercanos que tristeza. En resumen, ayuda a capturar el significado, sentimiento y el rol sintáctico.
+
+
