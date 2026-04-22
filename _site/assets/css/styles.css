@@ -66,7 +66,6 @@ header {
 header a {
   font-size: 1.4rem;
   font-weight: 600;
-  letter-spacing: 0.5px;
 }
 
 /* Footer */
@@ -112,9 +111,9 @@ a:hover::after {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   font-family: "hubotsans" !important;
-  letter-spacing: -0.5px;
   color: var(--color-text);
 }
 
@@ -133,12 +132,19 @@ h2 {
 h3 {
   font-size: 1.2rem;
   margin-top: 28px;
-  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+h4, h5 {
+  font-size: 1rem;
+  margin-top: 24px;
+  margin-bottom: 10px;
 }
 
 /* Listas */
 li {
   line-height: 1.8em;
+  color: var(--color-text-light);
 }
 
 /* Callouts (antes code blocks) */
