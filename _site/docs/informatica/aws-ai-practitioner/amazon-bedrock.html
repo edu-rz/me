@@ -145,6 +145,7 @@
 </table>
 
 <h5 id="4212-bleu-precision">4.2.1.2. BLEU (Precision)</h5>
+
 <ul>
   <li>La métrica BLEU se utiliza frecuentemente para medir la calidad de traducciones.</li>
   <li>Es útil para medir la calidad de un texto traducido al compararlo con una o más traducciones humanas de referencia.</li>
@@ -152,12 +153,14 @@
 </ul>
 
 <h5 id="4213-bertscore">4.2.1.3. BERTScore</h5>
+
 <ul>
   <li>La métrica BERTScore es utilizado para analizar la similitud semántica entre textos.</li>
   <li>Suele ser una métrica con alto costo de calcular y más lento que los otros tipos de métricas</li>
 </ul>
 
 <h5 id="4214-perplexity">4.2.1.4. Perplexity</h5>
+
 <ul>
   <li>La métrica Perplexity mide qué tan bien un modelo predice una secuencia de texto; valores más bajos indican mejor desempeño.</li>
 </ul>
@@ -201,74 +204,84 @@
   </tbody>
 </table>
 
-<h2 id="rag-and-knowledge-base">RAG and Knowledge Base</h2>
+<h2 id="5-rag-and-knowledge-base">5. RAG and Knowledge Base</h2>
 
-<p>RAG o por sus siglas Retrieval Augmented Generation.</p>
+<p>RAG o por sus siglas Retrieval Augmented Generation es una técnica que enriquece un prompt con fuentes de datos externas para aumentar la veracidad de las salidas de un FM y reducir las alucinaciones.</p>
 
-<p>Cuando quieras que tu modelo utilice información en específica que es de tu propiedad (llamada knowledge base) se utiliza esta técnica. Trata de tener una base de información en un formato en específico que el modelo utilizará como base para generar sus respuestas.</p>
-
-<p>El flujo inicia cuando el usuario crea un prompt, a lo que un modelo recepciona e inyecta/augmenta más información (texto) que es recogida del knowledge base teniendo como resultado un prompt completo. Para lo que otro modelo recepciona y genera el mensaje de respuesta.</p>
+<p>Para enriquecer los prompts y generar una mejor repuesta se debe tener una fuente de datos, usualmente llamada <em>Kwowledge Base</em>. Generalmente con información recopilada de Confluence, SharePoint, Websites, … En esta se subirán documentos/información que utilizará el modelo. Para ello, el contenido será particionados en <em>chunks</em> y luego transformados en <em>embeddings</em> para almacenarlos en una base de <em>datos vectorial</em>. A continuación un ejemplo del flujo completo:</p>
 
 <p><img src="https://arrobasystem.com/cdn/shop/articles/rag-retrieval-augmented-generation-revolucionando-la-generacion-de-contenidos-con-inteligencia-artificial_960x502_crop_center.jpg?v=1736795434960w" alt="alt text" /></p>
 
-<p>El formato específico para aplicar RAG son los <strong>Vector Database</strong>, y para transformar la data se suele almacenarla en S3, luego se transforma en chunks (particiones) y luego se generarán embedding con algun modelo permitido (Amazon Titan, …) para almacenarlo en un servicio de almacenamiento de vectores, tienes S3 Vectors, MongoDB, …</p>
-
-<p>Fuente de datos para alimentar tu <strong>Vector Database</strong> son S3, Confluence, SharePoint, Salesforce, Websites …</p>
-
-<h2 id="guardrails">Guardrails</h2>
-
-<p>Se encarga de controlar y filtrar los request que se realizan al modelo fundacional. Usualmente es usado para filtrar contenido dañino, irrespetuoso, que no está en el alcance del modelo o data muy sensible como tarjetas de crédito …</p>
-
-<p>Ejemplo: Al chatbot de mercado libre le preguntas que puedes cocinar hoy, y te dice: eso no se, no fastidies xd.</p>
-
-<h2 id="agents">Agents</h2>
-
-<p>Es un bot que puede realizar una o varia tareas, con el poder de tomar decisiones para cumplir con la solicitud del usuario.</p>
-
-<p>Se le dará un contexto de su función (sus instrucciones), Knowdledge base, acceso a APIs y funciones Lambda que el bot podrá ejecutar. Pero él será el encargado de decidir cuándo utilizar cada uno.</p>
-
-<p>De manera general, la fomra en que funciona un agente, es que habrá un modelo de Bedrock que definirá sus pasos a realizar para cumplir con la tarea general. En cada paso decidira si invocar api/lambda o un knowdledge base y toda esa infomración pasarsela a otro Bedrock model para que genere la respuesta final para el usuario.</p>
-
 <blockquote>
-  <p>Para hacer debug, los agentes tienen una funcionalidad de tracing para identificar lo que hace en cada paso.</p>
+  <p>AWS ofrece varios servicios para almacenar los <em>datos vectoriales</em> como S3 Vectors, OpenSearch Service. También externos como MongoDB o Pinecone.</p>
 </blockquote>
 
-<h2 id="logging">Logging</h2>
+<h2 id="6-guardrails">6. Guardrails</h2>
 
-<p>Para guardar logs/métricas, Amazon Bedrock se puede integrar con Amazon Cloudwatch y S3. Ya sea para almacenar, texto, imágenes o incluso embeddings.</p>
+<p>Guardrails es una característica del servicio de Amazon Bedrock, que te permite crear políticas para filtrar la entrada y salida de los FM. Concretamente se enfoca en filtrar el contenido inapropiado, racista o incluso restricciones fuera del alcance del modelo. Por ejemplo, podrías evitar que usuarios realicen preguntas relacionadas a cocina a un chatbot dedicado a brindar apoyo para explicar temas financieros.</p>
 
-<p>CloudWatch te permite agregar alertas cuando se sobrepase un umbral.</p>
+<h2 id="7-agents">7. Agents</h2>
 
-<h2 id="pricing">Pricing</h2>
+<p>Los Agentes son bots que pueden realizar multitareas, su importancia reside en que pueden tomar decisiones para cumplir con la solicitud del usuario de la mejor manera. Concretamente, tienen acceso a APIs que le permiten conectarse a una plataforma o una aplicación. Además de las instrucciones dadas por el usuario, fuentes de información (Knowdledge bases) e incluso funciones Lambda que pueda ejecutar.</p>
 
-<p>Hay 3 tipos de pago:</p>
+<p>Concretamente, con cada dato de entrada recibido, el agente definirá un plan de actividades para cumplir con la solicitud. Donde analizará sus <em>Knowdledge bases</em> y definirá qué API o función Lambda invocará en cada paso. Para luego realizar las invocaciones y generar la respuesta final para el usuario.</p>
+
+<blockquote>
+  <p>Amazon también ofrece la característica Tracing para permitir el debug e identificar que hace el agente en cada paso.</p>
+</blockquote>
+
+<h2 id="8-logging">8. Logging</h2>
+
+<p>Amazon te permite guardar logs/métricas en alguno de los siguientes servicios: Amazon Cloudwatch o S3. Te permite almacenar, texto, imágenes o incluso embeddings. Específicamente en CloudWatch, te permite agregar alertas para saber cuándo de supera un umbral.</p>
+
+<h2 id="9-pricing">9. Pricing</h2>
+
+<p>Amazon Bedrock ofrece distintos modelos de facturación según el patrón de uso:</p>
 
 <ul>
-  <li>On Demand: Paga solo por lo que usas, cantidad de input/output tokens (ya sea en texto, creando embeddings o imágenes)</li>
-  <li>Batch: Reduce 50% de costos cuando quieres realizar múltiples predicciones en una solicitud.</li>
-  <li>Provisioned Throughput: Reserva de un modelo, deseable cuando sabes cuantos tokens utilizarás por minuto.</li>
+  <li>
+    <p>On-Demand:
+Pagas por consumo, basado en la cantidad de tokens de entrada y salida, así como el uso de modelos de embeddings o generación de imágenes. Es ideal para cargas variables o impredecibles.</p>
+  </li>
+  <li>
+    <p>Batch Inference:
+Permite procesar grandes volúmenes de datos de forma asíncrona a menor costo por unidad. El ahorro depende del modelo y no es un porcentaje fijo.</p>
+  </li>
+  <li>
+    <p>Provisioned Throughput:
+Reservas capacidad dedicada (tokens por segundo). Es recomendable para aplicaciones con tráfico predecible y requisitos de baja latencia.</p>
+  </li>
 </ul>
 
-<p>Costo de técnicas:</p>
+<h3 id="91-costos-asociados-a-técnicas">9.1. Costos asociados a técnicas</h3>
 
 <ul>
-  <li>Prompt Engineering: gratis</li>
-  <li>$ RAG: Gastos para convertir texto en embeddings y también provisionar un Vector Database.</li>
-  <li>$$ Instruction-based Fine-Tuning: entrenas un modelo para que sea mejor siguiendo instrucciones. (computación normal)</li>
-  <li>$$$ Domain Adaptation Fine-Tuning: entrenas un modelo para que sea más especializado en un tema. (computación intensiva)</li>
+  <li>
+    <p>Prompt Engineering:
+No tiene costo adicional como técnica, pero cada ejecución del prompt genera consumo de tokens, por lo tanto sí implica costo.</p>
+  </li>
+  <li>
+    <p>RAG:
+Incluye costos por generación de embeddings, almacenamiento en bases vectoriales y consultas de recuperación, además del costo de inferencia del modelo.</p>
+  </li>
+  <li>
+    <p>Fine-Tuning:</p>
+    <ul>
+      <li>Instruction Fine-Tuning: menor costo relativo, orientado a mejorar el seguimiento de instrucciones.</li>
+      <li>Domain Adaptation Fine-Tuning: mayor costo, ya que requiere datasets más grandes y entrenamiento más intensivo.</li>
+    </ul>
+  </li>
 </ul>
 
 <blockquote>
-  <p>Configuración de temperatura, top K o top P, no impacta en el precio.</p>
+  <p>Parámetros como temperatura, top-k o top-p no tienen costo directo, pero pueden afectar indirectamente el costo al influir en la longitud de las respuestas generadas.</p>
 </blockquote>
 
-<h2 id="amazon-nova">Amazon Nova</h2>
+<h2 id="10-amazon-nova">10. Amazon Nova</h2>
 
-<p>Es la alternativa de Amazon ante el ecosistema de ChatGPT y ClaudeAI. Tiene diversos modelos para todo tipo de tarea, y se estructura de la siguiente manera:</p>
+<p>Es la alternativa de Amazon ante el ecosistema de OpenAI y Anthropic. Tiene diversos modelos para todo tipo de tarea, y se estructura de la siguiente manera:</p>
 
-<ol>
-  <li>Understanding:</li>
-</ol>
+<h3 id="101-understanding">10.1. Understanding</h3>
 
 <ul>
   <li>Nova Premier: multimodal más complejo y es usualmente utilizado para <strong>distillation</strong>.</li>
@@ -279,18 +292,14 @@
   <li>Nova Multimodal Embedding (2): realiza embedding para RAG y aplicaciones de búsqueda.</li>
 </ul>
 
-<ol>
-  <li>Creative:</li>
-</ol>
+<h3 id="102-creative">10.2. Creative</h3>
 
 <ul>
   <li>Nova Canvas: state of art para la generación de imágenes.</li>
   <li>Nova Reel: state of art para la generación de videos.</li>
 </ul>
 
-<ol>
-  <li>Speech:</li>
-</ol>
+<h3 id="103-speech">10.3. Speech</h3>
 
 <ul>
   <li>Nova Sonic (2): Modelo conversacional que puede hablar en varios idiomas.</li>

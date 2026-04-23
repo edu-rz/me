@@ -87,15 +87,18 @@ Métricas que nos permiten evaluar internamente el funcionamiento del modelo
 | el gato negro está en la casa | el gato está en casa | el gato está en casa | ALTO      |
 
 ##### 4.2.1.2. BLEU (Precision)
+
 - La métrica BLEU se utiliza frecuentemente para medir la calidad de traducciones.
 - Es útil para medir la calidad de un texto traducido al compararlo con una o más traducciones humanas de referencia.
 - No es útil para entender el significado. Además penaliza las traducciones con sinónimos y la brevedad.
 
 ##### 4.2.1.3. BERTScore
-- La métrica BERTScore es utilizado para analizar la similitud semántica entre textos. 
+
+- La métrica BERTScore es utilizado para analizar la similitud semántica entre textos.
 - Suele ser una métrica con alto costo de calcular y más lento que los otros tipos de métricas
 
 ##### 4.2.1.4. Perplexity
+
 - La métrica Perplexity mide qué tan bien un modelo predice una secuencia de texto; valores más bajos indican mejor desempeño.
 
 > En casos prácticos no se suele utilizar una métrica, sino varias.
@@ -112,64 +115,64 @@ Métricas que nos permiten evaluar extrinsicamente al modelo.
 | Conversion Rate          | El porcentaje de usuarios que me visitan y se convierten en clientes.       |
 | Efficiency               | Evaluar uso de cómputo, disco, recursos en general.                         |
 
-## RAG and Knowledge Base
+## 5. RAG and Knowledge Base
 
-RAG o por sus siglas Retrieval Augmented Generation.
+RAG o por sus siglas Retrieval Augmented Generation es una técnica que enriquece un prompt con fuentes de datos externas para aumentar la veracidad de las salidas de un FM y reducir las alucinaciones.
 
-Cuando quieras que tu modelo utilice información en específica que es de tu propiedad (llamada knowledge base) se utiliza esta técnica. Trata de tener una base de información en un formato en específico que el modelo utilizará como base para generar sus respuestas.
-
-El flujo inicia cuando el usuario crea un prompt, a lo que un modelo recepciona e inyecta/augmenta más información (texto) que es recogida del knowledge base teniendo como resultado un prompt completo. Para lo que otro modelo recepciona y genera el mensaje de respuesta.
+Para enriquecer los prompts y generar una mejor repuesta se debe tener una fuente de datos, usualmente llamada _Kwowledge Base_. Generalmente con información recopilada de Confluence, SharePoint, Websites, ... En esta se subirán documentos/información que utilizará el modelo. Para ello, el contenido será particionados en _chunks_ y luego transformados en _embeddings_ para almacenarlos en una base de _datos vectorial_. A continuación un ejemplo del flujo completo:
 
 ![alt text](https://arrobasystem.com/cdn/shop/articles/rag-retrieval-augmented-generation-revolucionando-la-generacion-de-contenidos-con-inteligencia-artificial_960x502_crop_center.jpg?v=1736795434960w)
 
-El formato específico para aplicar RAG son los **Vector Database**, y para transformar la data se suele almacenarla en S3, luego se transforma en chunks (particiones) y luego se generarán embedding con algun modelo permitido (Amazon Titan, ...) para almacenarlo en un servicio de almacenamiento de vectores, tienes S3 Vectors, MongoDB, ...
+> AWS ofrece varios servicios para almacenar los _datos vectoriales_ como S3 Vectors, OpenSearch Service. También externos como MongoDB o Pinecone.
 
-Fuente de datos para alimentar tu **Vector Database** son S3, Confluence, SharePoint, Salesforce, Websites ...
+## 6. Guardrails
 
-## Guardrails
+Guardrails es una característica del servicio de Amazon Bedrock, que te permite crear políticas para filtrar la entrada y salida de los FM. Concretamente se enfoca en filtrar el contenido inapropiado, racista o incluso restricciones fuera del alcance del modelo. Por ejemplo, podrías evitar que usuarios realicen preguntas relacionadas a cocina a un chatbot dedicado a brindar apoyo para explicar temas financieros.
 
-Se encarga de controlar y filtrar los request que se realizan al modelo fundacional. Usualmente es usado para filtrar contenido dañino, irrespetuoso, que no está en el alcance del modelo o data muy sensible como tarjetas de crédito ...
+## 7. Agents
 
-Ejemplo: Al chatbot de mercado libre le preguntas que puedes cocinar hoy, y te dice: eso no se, no fastidies xd.
+Los Agentes son bots que pueden realizar multitareas, su importancia reside en que pueden tomar decisiones para cumplir con la solicitud del usuario de la mejor manera. Concretamente, tienen acceso a APIs que le permiten conectarse a una plataforma o una aplicación. Además de las instrucciones dadas por el usuario, fuentes de información (Knowdledge bases) e incluso funciones Lambda que pueda ejecutar.
 
-## Agents
+Concretamente, con cada dato de entrada recibido, el agente definirá un plan de actividades para cumplir con la solicitud. Donde analizará sus _Knowdledge bases_ y definirá qué API o función Lambda invocará en cada paso. Para luego realizar las invocaciones y generar la respuesta final para el usuario.
 
-Es un bot que puede realizar una o varia tareas, con el poder de tomar decisiones para cumplir con la solicitud del usuario.
+> Amazon también ofrece la característica Tracing para permitir el debug e identificar que hace el agente en cada paso.
 
-Se le dará un contexto de su función (sus instrucciones), Knowdledge base, acceso a APIs y funciones Lambda que el bot podrá ejecutar. Pero él será el encargado de decidir cuándo utilizar cada uno.
+## 8. Logging
 
-De manera general, la fomra en que funciona un agente, es que habrá un modelo de Bedrock que definirá sus pasos a realizar para cumplir con la tarea general. En cada paso decidira si invocar api/lambda o un knowdledge base y toda esa infomración pasarsela a otro Bedrock model para que genere la respuesta final para el usuario.
+Amazon te permite guardar logs/métricas en alguno de los siguientes servicios: Amazon Cloudwatch o S3. Te permite almacenar, texto, imágenes o incluso embeddings. Específicamente en CloudWatch, te permite agregar alertas para saber cuándo de supera un umbral.
 
-> Para hacer debug, los agentes tienen una funcionalidad de tracing para identificar lo que hace en cada paso.
+## 9. Pricing
 
-## Logging
+Amazon Bedrock ofrece distintos modelos de facturación según el patrón de uso:
 
-Para guardar logs/métricas, Amazon Bedrock se puede integrar con Amazon Cloudwatch y S3. Ya sea para almacenar, texto, imágenes o incluso embeddings.
+- On-Demand:
+  Pagas por consumo, basado en la cantidad de tokens de entrada y salida, así como el uso de modelos de embeddings o generación de imágenes. Es ideal para cargas variables o impredecibles.
 
-CloudWatch te permite agregar alertas cuando se sobrepase un umbral.
+- Batch Inference:
+  Permite procesar grandes volúmenes de datos de forma asíncrona a menor costo por unidad. El ahorro depende del modelo y no es un porcentaje fijo.
 
-## Pricing
+- Provisioned Throughput:
+  Reservas capacidad dedicada (tokens por segundo). Es recomendable para aplicaciones con tráfico predecible y requisitos de baja latencia.
 
-Hay 3 tipos de pago:
+### 9.1. Costos asociados a técnicas
 
-- On Demand: Paga solo por lo que usas, cantidad de input/output tokens (ya sea en texto, creando embeddings o imágenes)
-- Batch: Reduce 50% de costos cuando quieres realizar múltiples predicciones en una solicitud.
-- Provisioned Throughput: Reserva de un modelo, deseable cuando sabes cuantos tokens utilizarás por minuto.
+- Prompt Engineering:
+  No tiene costo adicional como técnica, pero cada ejecución del prompt genera consumo de tokens, por lo tanto sí implica costo.
 
-Costo de técnicas:
+- RAG:
+  Incluye costos por generación de embeddings, almacenamiento en bases vectoriales y consultas de recuperación, además del costo de inferencia del modelo.
 
-- Prompt Engineering: gratis
-- $ RAG: Gastos para convertir texto en embeddings y también provisionar un Vector Database.
-- $$ Instruction-based Fine-Tuning: entrenas un modelo para que sea mejor siguiendo instrucciones. (computación normal)
-- $$$ Domain Adaptation Fine-Tuning: entrenas un modelo para que sea más especializado en un tema. (computación intensiva)
+- Fine-Tuning:
+  - Instruction Fine-Tuning: menor costo relativo, orientado a mejorar el seguimiento de instrucciones.
+  - Domain Adaptation Fine-Tuning: mayor costo, ya que requiere datasets más grandes y entrenamiento más intensivo.
 
-> Configuración de temperatura, top K o top P, no impacta en el precio.
+> Parámetros como temperatura, top-k o top-p no tienen costo directo, pero pueden afectar indirectamente el costo al influir en la longitud de las respuestas generadas.
 
-## Amazon Nova
+## 10. Amazon Nova
 
-Es la alternativa de Amazon ante el ecosistema de ChatGPT y ClaudeAI. Tiene diversos modelos para todo tipo de tarea, y se estructura de la siguiente manera:
+Es la alternativa de Amazon ante el ecosistema de OpenAI y Anthropic. Tiene diversos modelos para todo tipo de tarea, y se estructura de la siguiente manera:
 
-1. Understanding:
+### 10.1. Understanding
 
 - Nova Premier: multimodal más complejo y es usualmente utilizado para **distillation**.
 - Nova Pro: multimodal más balanceado presición/velocidad/costo para todo tipo de tarea.
@@ -178,11 +181,11 @@ Es la alternativa de Amazon ante el ecosistema de ChatGPT y ClaudeAI. Tiene dive
 - Nova Omni (2): multimodal aún más complejo.
 - Nova Multimodal Embedding (2): realiza embedding para RAG y aplicaciones de búsqueda.
 
-2. Creative:
+### 10.2. Creative
 
 - Nova Canvas: state of art para la generación de imágenes.
 - Nova Reel: state of art para la generación de videos.
 
-3. Speech:
+### 10.3. Speech
 
 - Nova Sonic (2): Modelo conversacional que puede hablar en varios idiomas.
