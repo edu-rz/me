@@ -13,6 +13,7 @@
 
 ## Ideas
 
+- Teoría de los roles sociales
 - Gestión de un Jardín Digital
 - Creando un microambiente tropical en Lima (Humidificador Casero)
 - Gestión de tiempo entre proyectos tech y hobbies.
