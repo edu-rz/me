@@ -27,6 +27,6 @@
 ## Últimos cambios
 
 <!-- START_COMMITS -->
-- Mejora Amazon Bedrock — edu-rz (f7676c5)- Merge branch 'main' of https://github.com/edu-rz/me — edu-rz (5001b7f)- Fix case sensitivity for README file references — Eduardo Ramón (e17c24e)<!-- END_COMMITS -->
+- Bedrock mejora — edu-rz (e53b641)- Mejora Amazon Bedrock — edu-rz (f7676c5)- Merge branch 'main' of https://github.com/edu-rz/me — edu-rz (5001b7f)- Fix case sensitivity for README file references — Eduardo Ramón (e17c24e)<!-- END_COMMITS -->
 
 <!-- bundle exec jekyll serve -->
