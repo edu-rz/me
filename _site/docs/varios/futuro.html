@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/me/assets/images/favicon.ico">
+  <title>¿Qué futuro nos espera a los programadores? ¿Qué habilidades nos diferenciarán en los próximos años? - 24/04/2026 | edudedu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/me/assets/css/styles.css">
+</head>
+<body class="markdown-body">
+  <header>
+    <a href="/me/">edudedu</a>
+  </header>
+
+  <main>
+    <h1 id="qué-futuro-nos-espera-a-los-programadores-qué-habilidades-nos-diferenciarán-en-los-próximos-años---24042026">¿Qué futuro nos espera a los programadores? ¿Qué habilidades nos diferenciarán en los próximos años? - 24/04/2026</h1>
+
+<p>“La IA acabará con el trabajo” o “seremos reemplazados por la ella” son frases muy frecuentes desde que surgió esta tecnología. Sin embargo, el problema no es que la IA reemplace a los programadores, sino que está cambiando quién es valioso.</p>
+
+<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA6DUMb94hO_vrDE72CTd_q2aMlp12VEqkJQ&amp;s" alt="alt image" /></p>
+
+<p>En la actualidad, no es novedad la magnitud de la fuente de ingresos para crear modelos cada vez más grandes. Sin embargo hay un problema grave que probablemente se presentará a mediano plazo. La inversión de la IA es <strong>mayor</strong> a su retorno. Algún día las grandes empresas querrán recuperar su inversión y en ese entonces el impacto será económico. Superficialmente podemos asumir que el acceso será más restrictivo, probablemente habrán anuncios o respuestas sesgadas por colaboración pagada. Pero a fin de cuentas, si sube el costo, debemos fortalecer el criterio para evitar el uso indiscriminado. Por lo contrario, si ocurre un milagro y los modelos se mantienen gratuitos o baratos, ya no se trata de usar IA, sino de <em>cómo</em> usarla.</p>
+
+<p>Como bien es sabido, el uso de IA para las tareas diarias aumenta la productividad. Permiten a los desarrolladores más experimentados codificar más funcionalidades en menos tiempo. A simple vista, usar esta tecnología es beneficiosa y puede ahorrar costos operativos contratando menos recursos. Sin embargo, el principal blanco serán los juniors ya que un desarrollador experimentado puede realizar sus funciones apoyado con la IA. Esto provocará un problema grave en el futuro, habrá escasez de expertise real.</p>
+
+<p>La IA nos está reinventando, un desarrollador que la sepa usar puede opacar a cualquier otro. Sin embargo, la IA no es responsable del resultado que genere. Si bien es un buen apoyo, no tiene contexto organizacional y en muchos casos no ve el sistema holísticamente.</p>
+
+<p>Dentro de las habilidades que tenemos que potenciar para diferenciarnos del mercado, a mediano plazo tenemos que fortalecer la técnica de Prompt Engineering. De esta manera, dar las instrucciones y el contexto adecuado, precisar todo lo que se desee sin dejar espacios a libre interpretación del modelo. En general, el código está dejando de ser un activo escazo, por lo que potenciar el pensamiento sistemático, tomar decisiones estratégicas, capacidad de abstracción y delegar tareas correctamente nos hará mejores desarrolladores. Igualmente seleccionar el modelo más oportuno para cada tarea.</p>
+
+<p>La IA potenciará a aquellos que la sepan usar, por ello, es importante entender cómo funcionan los diversos frameworks, librerías, y demás, para usarlos de la forma más correcta y así tomar decisiones más inteligentes. Como se comentó, la programación ha dejado de ser un activo escazo, ya que muchos pueden acceder a ella. Pero pocos serán los que programen correctamente.</p>
+
+  </main>
+
+  <aside id="toc"></aside>
+
+  <footer>
+    <p>&copy; 2026 — edudedu</p>
+  </footer>
+</body>
+<script>
+  const toc = document.getElementById("toc");
+  const headings = document.querySelectorAll("h1, h2, h3");
+
+  headings.forEach((h, i) => {
+    const id = "heading-" + i;
+    h.id = id;
+
+    const a = document.createElement("a");
+    a.href = "#" + id;
+    a.textContent = h.textContent;
+
+    if (h.tagName === "H2") a.style.marginLeft = "10px";
+    if (h.tagName === "H3") a.style.marginLeft = "20px";
+
+    toc.appendChild(a);
+  });
+</script>
+<script>
+  const links = document.querySelectorAll("#toc a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    document.querySelectorAll("h1, h2, h3").forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (scrollY >= sectionTop - 100) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    links.forEach((a) => {
+      a.classList.remove("active");
+      if (a.getAttribute("href") === "#" + current) {
+        a.classList.add("active");
+      }
+    });
+  });
+</script>
+<script>
+  function typeEffect(element, speed = 40) {
+    const text = element.textContent;
+    element.textContent = "";
+    element.classList.add("typing");
+
+    let i = 0;
+
+    function typing() {
+      if (i < text.length) {
+        element.textContent += text.charAt(i);
+        i++;
+        setTimeout(typing, speed);
+      } else {
+        element.classList.remove("typing");
+      }
+    }
+
+    typing();
+  }
+
+  // solo aplicar al h1
+  const title = document.querySelector("h1");
+  if (title) typeEffect(title);
+</script>
+</html>
