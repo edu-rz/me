@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/me/assets/images/favicon.ico">
+  <title>Amazon Q | edudedu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/me/assets/css/styles.css">
+</head>
+<body class="markdown-body">
+  <header>
+    <a href="/me/">edudedu</a>
+  </header>
+
+  <main>
+    <h1 id="amazon-q">Amazon Q</h1>
+
+<p>Amazon Q es un asistente de IA generativa desarrollado por AWS, está diseñada específicamente para empresas y trabajadores. Ofrece configuración sencilla, no gestionas la infraestructura del modelo, tampoco decides qué modelos usar, pero tienes que subir documentos o dar fuentes de datos para darle contexto.</p>
+
+<p><img src="https://static.seaflux.tech/media/blog/c983cba6-6be0-428d-81b5-578860df7dfc-banner.png" alt="alt text" /></p>
+
+<h2 id="amazon-q-business">Amazon Q Business</h2>
+
+<p>En base a Amazon Bedrock, se genera un FM que te servirá como asistente inteligente, tiene todas las capacidades de un modelo generativo como realizar resúmenes, generar documentos con información empresarial, entre otros. Como una de sus características clave, es que el acceso a la información dependerá del tipo de usuario que esté consultando. En ese sentido, está integrado con el servicio de IAM para restringir accesos (Admin Controls).</p>
+
+<p>Amazon Q Business tiene acceso a servicios internos (S3, RDS, …) y externos como Microsoft 365, Salesforce, entre otros.</p>
+
+<h3 id="amazon-q-apps">Amazon Q Apps</h3>
+
+<p>Es una funcionalidad de Amazon Q Business que permite crear aplicaciones dentro del asistente ya creado. Concretamente elaboras un prompt para inducir al modelo a una respuesta consistente.</p>
+
+<h2 id="amazon-q-developer-kiro">Amazon Q Developer (Kiro)</h2>
+
+<p>Es un asistente que responde preguntas de la documentación de AWS y de los servicios de Amazon. También tiene acceso a tus recursos dentro de AWS, así que te facilitará información, comandos y sugerencias ante tus necesidades.</p>
+
+<h2 id="amazon-q-for-aws-services">Amazon Q for AWS services</h2>
+
+<p>Puedes encontrar Amazon Q como asistente en servicios como Quickshare, EC2, Chatbot, Glue…</p>
+
+<h2 id="partyrock">PartyRock</h2>
+
+<p><a href="https://partyrock.aws/">Party Rock</a> es un playground para crear modelos de ia generativa potenciado con Amazon Bedrock.</p>
+
+  </main>
+
+  <aside id="toc"></aside>
+
+  <footer>
+    <p>&copy; 2026 — edudedu</p>
+  </footer>
+</body>
+<script>
+  const toc = document.getElementById("toc");
+  const headings = document.querySelectorAll("h1, h2, h3");
+
+  headings.forEach((h, i) => {
+    const id = "heading-" + i;
+    h.id = id;
+
+    const a = document.createElement("a");
+    a.href = "#" + id;
+    a.textContent = h.textContent;
+
+    if (h.tagName === "H2") a.style.marginLeft = "10px";
+    if (h.tagName === "H3") a.style.marginLeft = "20px";
+
+    toc.appendChild(a);
+  });
+</script>
+<script>
+  const links = document.querySelectorAll("#toc a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    document.querySelectorAll("h1, h2, h3").forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (scrollY >= sectionTop - 100) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    links.forEach((a) => {
+      a.classList.remove("active");
+      if (a.getAttribute("href") === "#" + current) {
+        a.classList.add("active");
+      }
+    });
+  });
+</script>
+<script>
+  function typeEffect(element, speed = 40) {
+    const text = element.textContent;
+    element.textContent = "";
+    element.classList.add("typing");
+
+    let i = 0;
+
+    function typing() {
+      if (i < text.length) {
+        element.textContent += text.charAt(i);
+        i++;
+        setTimeout(typing, speed);
+      } else {
+        element.classList.remove("typing");
+      }
+    }
+
+    typing();
+  }
+
+  // solo aplicar al h1
+  const title = document.querySelector("h1");
+  if (title) typeEffect(title);
+</script>
+</html>
