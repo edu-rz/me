@@ -4,7 +4,7 @@ layout: default
 
 # Generative AI
 
-La IA generativa es un subcampo del deep learning, y al igual que los modelos de este campo. La ig generativa es entrenada con data no etiquetada y su objetivo es generar los mismos datos de entrada. ojo que no es como el resto de modelos que buscan identificar o agrupar datos, sino generar nuevos datos que sean similares a los inputs.
+La IA generativa es un subcampo del deep learning, y al igual que los modelos de este campo. La ia generativa es entrenada con data no etiquetada y su objetivo es generar los mismos datos de entrada. ojo que no es como el resto de modelos que buscan identificar o agrupar datos, sino generar nuevos datos que sean similares a los inputs.
 
 ![alt text](https://communities.sas.com/t5/image/serverpage/image-id/93362i9D7F79AA3B09013B/image-dimensions/393x380?v=v2)
 
@@ -16,7 +16,7 @@ Es un subtipo de la ia generativa, se trata de modelos que son entrenados con un
 
 ## LLMs
 
-Otro tipo de ia generativa, que es muy buena para recordar información en largos periodos de tiempo, esto se debe al diseño de su arquitectura. Es usado para tareas relacionada con texto.
+Otro tipo de ia generativa, que ha sido entrenada con grandes cantidades de datos de texto. Es usado para tareas relacionada con texto y su tarea es predecir la siguiente palabra más probable de una secuencia de texto.
 
 ### Cómo funciona para texto
 

@@ -9,3 +9,4 @@ nav_order: 1
 - [Amazon Bedrock](./amazon-bedrock.md)
 - [Prompt Engineering](./prompt-engineering.md)
 - [Amazon Q](./amazon-q.md)
+- [AI & ML](./ai-ml.md)
