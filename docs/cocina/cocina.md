@@ -9,3 +9,4 @@ nav_order: 1
 
 - [Pizza](./pizza.md)
 - [Kéfir de Agua](./kefir.md)
+- [Pan](./pan.md)
